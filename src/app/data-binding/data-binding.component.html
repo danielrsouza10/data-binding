@@ -1,0 +1,85 @@
+<!-- <section class="property-binding">
+  <article>
+    <h3>Data-Binding</h3>
+
+    <div>
+      Selecione uma classe:
+      <select #classe (change)="(0)">
+        <option value="alert-success">Success</option>
+        <option value="alert-warning">Warning</option>
+        <option value="alert-info">Info</option>
+        <option value="alert-danger">Danger</option>
+      </select>
+
+      <div class="alert {{ classe.value }}" role="alert">
+        Texto colorido conforme valor do combobox
+      </div>
+    </div>
+    <br /><br />
+    <div
+      class="alert"
+      role="alert"
+      [class.alert-success]="classe.value == 'alert-success'"
+    >
+      Sucess
+    </div>
+
+    <div
+      class="alert"
+      role="alert"
+      [class.alert-warning]="classe.value == 'alert-warning'"
+    >
+      Warning
+    </div>
+    <div
+      class="alert"
+      role="alert"
+      [class.alert-info]="classe.value == 'alert-info'"
+    >
+      Info
+    </div>
+    <div
+      class="alert"
+      role="alert"
+      [class.alert-danger]="classe.value == 'alert-danger'"
+    >
+      Danger
+    </div>
+
+    <div
+      class="alert alert-danger"
+      role="alert"
+      [style.display]="classe.value === 'alert-danger' ? 'block' : 'none'"
+    >
+      Danger
+    </div>
+  </article>
+</section> -->
+<section>
+  <article>
+    <h3>Event Binding</h3>
+    <div>
+      <button (click)="botaoClicado()" class="btn btn-primary">
+        Me clique!
+      </button>
+
+      <br><br>
+
+      <input type="text"
+      (keyup)="onKeyUp($event)"
+      (keyup.enter)="salvarValor(campoInput.value)"
+      (blur)="salvarValor(campoInput.value)"
+      #campoInput>
+
+      <p>Valor Atual do Input: {{ valorAtual }}</p>
+      <p>Valor Salvo do Input: {{ valorSalvo }}</p>
+
+      <span
+      (mouseover)="onMouseOverOut()"
+      (mouseout)="onMouseOverOut()"
+      [class.highlight]="isMouseOver">Passe o mouse sobre mim</span>
+
+      <p>is mouse over? <span [class.highlight]="isMouseOver">{{ isMouseOver }}</span></p>
+    </div>
+  </article>
+</section>
