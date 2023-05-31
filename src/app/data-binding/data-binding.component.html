@@ -55,7 +55,7 @@
     </div>
   </article>
 </section> -->
-<section>
+<!-- <section>
   <article>
     <h3>Event Binding</h3>
     <div>
@@ -82,4 +82,53 @@
       <p>is mouse over? <span [class.highlight]="isMouseOver">{{ isMouseOver }}</span></p>
     </div>
   </article>
+</section> -->
+
+<!-- <section class="two-way-binding">
+  <article>
+    <h3>Two-way data Binding</h3>
+
+    <div>
+      <input type="text" 
+      [value]="nome" 
+      (input)="nome = $any($event.target).value"/>
+
+      <input type="text" 
+      [ngModel]="nome" 
+      (ngModelChange)="nome = $event"/>
+
+      <input type="text" 
+      [(ngModel)]="nome" 
+      />
+
+      <input type="text"
+      [(ngModel)]="pessoa.nome"
+      >
+      <input type="text"
+      [(ngModel)]="pessoa.idade"
+      >
+
+      <input type="text"
+      [(ngModel)]="pessoa.endereco.rua"
+      >
+
+        <p>Voce digitou o {{nome}}</p>
+
+        <p>{{ pessoa.nome }}</p>
+
+        <p>{{ pessoa.idade }}</p>
+
+        <p>{{ pessoa.endereco.rua }}</p>
+
+    </div>
+  </article>
+</section> -->
+
+<section class="input-output-properties">
+  <article>
+    <h3>Input/Output Properties</h3>
+
+    <app-curso [nome]="nomeDoCurso"></app-curso>
+  </article>
 </section>
+

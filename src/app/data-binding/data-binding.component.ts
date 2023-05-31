@@ -14,6 +14,16 @@ export class DataBindingComponent {
   valorSalvo: string = '';
   isMouseOver: boolean = false;
 
+  nomeDoCurso: string = 'Angular';
+
+  pessoa: any = {
+    nome: 'def',
+    idade: 32,
+    endereco: {
+      rua: 'R-16',
+    },
+  };
+
   getValor() {
     return 2;
   }
@@ -34,10 +44,7 @@ export class DataBindingComponent {
     this.valorSalvo = valor;
   }
 
-
-  
-
-  onMouseOverOut(){
+  onMouseOverOut() {
     this.isMouseOver = !this.isMouseOver;
   }
 
